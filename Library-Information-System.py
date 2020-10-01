@@ -58,6 +58,18 @@ def fun(e):
             roll.grid(row=0,column=1)
             Label(root,text='        ').grid(row=1,column=2)
             Label(root,text='       ').grid(row=16,column=0)
+            Label(root,text='        ').grid(row=1,column=2)
+            Label(root,text='       ').grid(row=16,column=0)
+            Label(root,text='        ').grid(row=1,column=2)
+            Label(root,text='       ').grid(row=16,column=0)
+            
+            def submiaaat():
+                cur.execute("select * from student where roll_no=(?)",(int(roll.get()),))
+                x=cur.fetchone()
+                if x[3]==1:
+                    gender='Male'
+                if x[3]==2:
+                    gender='Female'
             def submit():
                 cur.execute("select * from student where roll_no=(?)",(int(roll.get()),))
                 x=cur.fetchone()
